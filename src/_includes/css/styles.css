@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;800&display=swap');
+
+:root {
+  --dark: #202020;
+  --light: #efefef;
+  --code-editor: #000000;
+  --background: var(--dark);
+  --text-color: var(--light);
+  --font: 'Rubik', sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+}
+
+body {
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 1rem;;
+  font-weight: 800;
+  line-height: 1.15;
+  text-transform: capitalize;
+}
+
+h1 {
+  font-size: 11.089rem;
+  font-size: min(calc(6.854rem + 1vw), 11.089rem);
+}
+
+h2 {
+  font-size: 6.854rem;
+  font-size: min(calc(2.168rem + 1vw), 6.854rem);
+
+}
+
+h3 {
+  font-size: 4.236rem;
+  font-size: min(calc(2.168rem + 1vw), 4.236rem);
+}
+
+h4 {
+  font-size: 2.618rem;
+  font-size: min(calc(1.618rem + 1vw), 2.168rem);
+}
+
+h5, p, dl, li {
+  font-size: 1.618rem;
+  font-size: min(calc(1rem + 1vw), 1.618rem);
+}
+
+article {
+  color: var(--text-color);
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--font);
+}
+
+.title-slide {
+  display: -ms-grid;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.title-slide p{
+  font-size: min(calc(2.168rem + 1vw), 4.236rem);
+  text-align: center;
+}
+
+.vertical-split {
+  display: -ms-grid;
+  display: grid;
+  grid-template-rows: 1fr 7fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-content: center;
+}
+
+.vertical-split h2{
+  grid-row: 1;
+  grid-column: 1 / span 2;
+}
+
+.vertical-split p:first-of-type{
+  text-align: center;
+}
+
+.vertical-split img{
+  max-height: 80vh;
+  width: 95%;
+  object-fit: cover;
+}
+
+.vertical-split p, ul{
+  font-size: 2.618rem;
+  line-height: 2;
+  margin: 0;
+}
+
+.vertical-split ul{
+  margin-left: 2rem;
+}
+
+.header-and-content {
+  display: -ms-grid;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.header-and-content .react-container {
+  display: grid;
+  place-items: center;
+  margin-top: -15rem;
+}
+
+.header-and-content .react-container.split-panel {
+  place-items: unset;
+  margin-top: 0;
+  grid-template-columns: 1fr 1fr;
+}
+
+video {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 15vw;
+}

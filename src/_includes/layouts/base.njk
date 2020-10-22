@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <style>
+      {% include "css/styles.css" %}
+    </style>
+</head>
+<body>
+    <main>
+        {% block presentation %}
+        {% endblock presentation %}
+        <video id="video"></video>
+    </main>
+    <script>
+        {% include "js/present.js" %}
+    </script>
+    <script src="/js/app.js"></script>
+</body>
+</html>

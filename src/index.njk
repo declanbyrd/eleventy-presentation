@@ -1,0 +1,11 @@
+{% extends 'layouts/base.njk' %}
+
+{% block presentation %}
+
+{% for slide in collections.slides %}
+  <article id="{{slide.fileSlug}}" class="{% for class in slide.data.layoutTemplate %}[ {{class}} ]{% endfor %}">
+    {{slide.templateContent | safe}}
+  </article>
+{% endfor %}
+
+{% endblock presentation %}
