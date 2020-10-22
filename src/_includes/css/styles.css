@@ -47,9 +47,10 @@ h4 {
   font-size: min(calc(1.618rem + 1vw), 2.168rem);
 }
 
-h5, p, dl, li {
-  font-size: 1.618rem;
-  font-size: min(calc(1rem + 1vw), 1.618rem);
+p, dl, li {
+  font-size: 2.618rem;
+  font-size: min(calc(1.618rem + 1vw), 2.618rem);
+  line-height: 1.5;
 }
 
 article {
@@ -57,6 +58,18 @@ article {
   width: 100vw;
   height: 100vh;
   font-family: var(--font);
+}
+
+a, a:visited {
+  color: var(--text-color);
+}
+
+article section {
+  margin: 0 2rem;
+}
+
+article.vertical-split section > * + * {
+  margin-top: 3rem;
 }
 
 .title-slide {
@@ -86,23 +99,19 @@ article {
   grid-column: 1 / span 2;
 }
 
-.vertical-split p:first-of-type{
-  text-align: center;
-}
-
 .vertical-split img{
   max-height: 80vh;
   width: 95%;
   object-fit: cover;
 }
 
-.vertical-split p, ul{
+.vertical-split p, .vertical-split li{
   font-size: 2.618rem;
   line-height: 2;
   margin: 0;
 }
 
-.vertical-split ul{
+article ul{
   margin-left: 2rem;
 }
 
