@@ -35,9 +35,9 @@ export const LiveCode = () => {
   return (
     <>
       <LiveProvider code={code} scope={scope} theme={nightOwl}>
+        <LivePreview style={{display: 'flex',justifyContent: 'center'}}/>
         <LiveEditor style={{background: "var(--code-editor)", fontSize: "1rem", borderRadius: '0.5rem'}}/>
         <LiveError />
-        <LivePreview style={{display: 'flex',justifyContent: 'center'}}/>
       </LiveProvider>
     </>
   );

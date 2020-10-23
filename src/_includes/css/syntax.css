@@ -34,7 +34,8 @@ pre[class*='language-'] {
   overflow-x: auto;
   word-wrap: normal;
   white-space: pre;
-  max-width: 80vw;
+  max-width: 80ch;
+  margin: 0.5rem auto;
 }
 
 *:not(pre) > code,

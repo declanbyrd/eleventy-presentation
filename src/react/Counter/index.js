@@ -7,14 +7,12 @@ export const Counter = () => {
     fontSize: '4rem',
     background: 'green',
     borderRadius: '1rem',
-    display: 'block',
     cursor: 'pointer',
-    width: '20rem'
   }
 
   return (
-    <div style={{display: "flex", flexDirection: "column"}}>
-      <p style={{fontSize: "4rem"}}>You clicked {count} times.</p>
+    <div style={{display: "grid"}}>
+      <p style={{fontSize: "4rem", margin: "0 0 1rem 0"}}>You clicked {count} times.</p>
       <button focusable='true' style={buttonStyles} type="button" onClick={() => setCount(count + 1)}>Click me!</button>
     </div>
   )

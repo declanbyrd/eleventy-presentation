@@ -47,10 +47,10 @@ h4 {
   font-size: min(calc(1.618rem + 1vw), 2.168rem);
 }
 
-p, dl, li {
-  font-size: 2.618rem;
-  font-size: min(calc(1.618rem + 1vw), 2.618rem);
-  line-height: 1.5;
+p, dl, li, ul {
+  font-size: 1.618rem;
+  font-size: min(calc(1rem + 1vw), 1.618rem);
+  line-height: 2;
 }
 
 article {
@@ -103,12 +103,6 @@ article.vertical-split section > * + * {
   max-height: 80vh;
   width: 95%;
   object-fit: cover;
-}
-
-.vertical-split p, .vertical-split li{
-  font-size: 2.618rem;
-  line-height: 2;
-  margin: 0;
 }
 
 article ul{
