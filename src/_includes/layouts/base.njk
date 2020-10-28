@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="{{ '/assets/styles/theme.css' | url }}">
     <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url }}">
     <link rel="stylesheet" href="{{ '/assets/styles/syntax.css' | url }}">
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
     <script>
+        mermaid.initialize({ startOnLoad: true });
         localStorage.getItem('theme') && 
         document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'));
     </script>

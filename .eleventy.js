@@ -7,6 +7,15 @@ module.exports = (eleventyConfig) => {
     );
     eleventyConfig.addPlugin(syntaxHighlighting, { templateFormats: 'md' });
     eleventyConfig.addPlugin(inclusiveLangPlugin);
+
+    // Mermaid magic
+    const highlighter = eleventyConfig.markdownHighlighter;
+    eleventyConfig.addMarkdownHighlighter((str, lang) => {
+      if (lang === 'mermaid') {
+        return `<pre class="mermaid">${str}</pre>`
+      }
+      return highlighter(str, lang);
+    })
     
     eleventyConfig.addPassthroughCopy('src/assets/styles/*.css');
     eleventyConfig.addPassthroughCopy('src/assets/scripts');

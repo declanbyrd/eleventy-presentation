@@ -215,6 +215,10 @@ article ul{
   grid-template-rows: auto 1fr;
 }
 
+.header-and-content.centered section{
+  place-self: center;
+}
+
 .header-and-content .react-container {
   display: grid;
   place-items: center;
