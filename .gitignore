@@ -1,4 +1,4 @@
 node_modules
 dist
 .git
-src/js
+src/assets/scripts/react-components.js

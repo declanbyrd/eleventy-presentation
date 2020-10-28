@@ -1,0 +1,27 @@
+<ul class="theme-switcher" data-visible="false">
+  <li class="theme-switcher-item">
+    <button class="theme-switcher-toggle-button close" id="themeSwitcherButtonClose">
+      <svg width="30" height="30" role="img" aria-labelledby="theme-switcher-toggle-close" focusable="false">
+        <title id="theme-switcher-toggle-close">Close the theme switcher</title>
+        <use href="/assets/icons/icons.svg#close"></use>
+      </svg>
+      <span class='visually-hidden'>Close the theme switcher</span>
+    </button>
+  </li>
+{% for theme in themes %}
+  <li class="theme-switcher-item">
+    <button class="theme-switcher-button" data-theme-id="{{ theme.id }}" style="background-color: {{ theme.colors.background }}; border-color: {{ theme.colors.accent }}">
+    <span class="theme-switcher-label" style="color: {{ theme.colors.primary }}">
+        {{ theme.name }}
+      </span>
+    </button>
+  </li>
+{% endfor %}
+</ul>
+<button type="button" id="themeSwitcherButtonOpen" class="theme-switcher-toggle-button open">
+  <svg width="30" height="30" role="img" aria-labelledby="theme-switcher-toggle-open" focusable="false">
+    <title id="theme-switcher-toggle-open">Open the theme switcher</title>
+    <use href="/assets/icons/icons.svg#pallette"></use>
+  </svg>
+  <span class='visually-hidden'>Open the theme switcher</span>
+</button>

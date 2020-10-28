@@ -5,7 +5,8 @@ export const Counter = () => {
 
   const buttonStyles = {
     fontSize: '4rem',
-    background: 'green',
+    background: 'var(--color-accent)',
+    color: 'var(--color-background)',
     borderRadius: '1rem',
     cursor: 'pointer',
   }

@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>11ty Presentation</title>
-    <style>
-      {% include "css/styles.css" %}
-      {% include "css/syntax.css" %}
-    </style>
+    <link rel="stylesheet" href="{{ '/assets/styles/theme.css' | url }}">
+    <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url }}">
+    <link rel="stylesheet" href="{{ '/assets/styles/syntax.css' | url }}">
+    <script>
+        localStorage.getItem('theme') && 
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'));
+    </script>
 </head>
 <body>
     <main>
+        {% include '_themePicker.njk' %}
         {% block presentation %}
         {% endblock presentation %}
         <video id="video"></video>
     </main>
-    <script>
-        {% include "js/present.js" %}
-    </script>
-    <script src="/js/app.js"></script>
 </body>
+    <script src="{{ '/assets/scripts/present.js' | url }}"></script>
+    <script src="{{ '/assets/scripts/theme.js' | url }}"></script>
+    <script src="{{ '/assets/scripts/react-components.js' | url }}"></script>
 </html>

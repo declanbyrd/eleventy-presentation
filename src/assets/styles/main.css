@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;800&display=swap');
+
+:root {
+  --code-editor: #000000;
+  --font: 'Rubik', sans-serif;
+  --theme-switcher-panel-width: 25rem;
+  --theme-switcher-transition: transform 500ms ease-in-out;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 1rem;
+  font-weight: 800;
+  line-height: 1.15;
+  text-transform: capitalize;
+  color: var(--color-primary);
+}
+
+h1 {
+  font-size: 11.089rem;
+  font-size: min(calc(6.854rem + 1vw), 11.089rem);
+}
+
+h2 {
+  font-size: 6.854rem;
+  font-size: min(calc(2.168rem + 1vw), 6.854rem);
+
+}
+
+h3 {
+  font-size: 4.236rem;
+  font-size: min(calc(2.168rem + 1vw), 4.236rem);
+}
+
+h4 {
+  font-size: 2.618rem;
+  font-size: min(calc(1.618rem + 1vw), 2.168rem);
+}
+
+p, dl, li, ul {
+  font-size: 1.618rem;
+  font-size: min(calc(1rem + 1vw), 1.618rem);
+  line-height: 2;
+}
+
+article {
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--font);
+  background: var(--color-background);
+  color: var(--color-primary);
+}
+
+a, a:visited {
+  color: var(--color-primary);
+}
+
+article section {
+  margin: 0 2rem;
+}
+
+article.vertical-split section > * + * {
+  margin-top: 3rem;
+}
+
+.visually-hidden {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    color: var(--color-primary);
+}
+
+.theme-switcher {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--theme-switcher-panel-width);
+  height: 100vh;
+  z-index: 2;
+  background: var(--color-background);
+  overflow-y: scroll;
+  transform: translateX(0);
+  transition: var(--theme-switcher-transition);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2rem repeat(auto-fit, minmax(5rem, 1fr));
+  place-items: center;
+  row-gap: 2rem;
+}
+
+.theme-switcher-item {
+  list-style: none;
+}
+
+.theme-switcher-item:first-child {
+  place-self: start start;
+}
+
+.theme-switcher-item:not(:first-child) {
+  height: 90%;
+  width: 90%;
+}
+
+.theme-switcher-label {
+  font-weight: 800;
+  line-height: 1.15;
+  text-transform: capitalize;
+  font-family: var(--font);
+  font-size: 3em;
+}
+
+.theme-switcher-button {
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.theme-switcher-toggle-button.close {
+  border: none;
+  background: var(--color-background);
+  cursor: pointer;
+  fill: var(--color-accent);
+}
+
+.theme-switcher-toggle-button.open{
+  position: absolute;
+  top: 5vh;
+  right: 5vw;
+  background: var(--color-background);
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  fill: var(--color-accent);
+}
+
+.theme-switcher-toggle-button:focus {
+  border: 2px dashed var(--color-primary);
+}
+
+.theme-switcher-toggle-button:hover {
+  fill: var(--color-secondary);
+}
+
+.theme-switcher[data-visible="false"] {
+  transform: translateX(calc(100vw + var(--theme-switcher-panel-width)));
+}
+
+.theme-switcher[data-visible="false"] ~ article {
+  filter: brightness(100%);
+  transition: filter 400ms ease-in-out;
+}
+
+.theme-switcher[data-visible="true"] ~ article {
+  filter: brightness(40%);
+  transition: filter 400ms ease-in-out;
+}
+
+.title-slide {
+  display: -ms-grid;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.title-slide p{
+  font-size: min(calc(2.168rem + 1vw), 4.236rem);
+  text-align: center;
+}
+
+.vertical-split {
+  display: -ms-grid;
+  display: grid;
+  grid-template-rows: 1fr 7fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-content: center;
+}
+
+.vertical-split h2{
+  grid-row: 1;
+  grid-column: 1 / span 2;
+}
+
+.vertical-split img{
+  max-height: 80vh;
+  width: 95%;
+  object-fit: cover;
+}
+
+article ul{
+  margin-left: 2rem;
+}
+
+.header-and-content {
+  display: -ms-grid;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.header-and-content .react-container {
+  display: grid;
+  place-items: center;
+  margin-top: -15rem;
+}
+
+.header-and-content .react-container.split-panel {
+  place-items: unset;
+  margin-top: 0;
+  grid-template-columns: 1fr 1fr;
+}
+
+video {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 15vw;
+}

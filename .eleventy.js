@@ -8,7 +8,9 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPlugin(syntaxHighlighting, { templateFormats: 'md' });
     eleventyConfig.addPlugin(inclusiveLangPlugin);
     
-    eleventyConfig.addPassthroughCopy('src/js');
+    eleventyConfig.addPassthroughCopy('src/assets/styles/*.css');
+    eleventyConfig.addPassthroughCopy('src/assets/scripts');
+    eleventyConfig.addPassthroughCopy('src/assets/icons');
 
     return {
         dir: {

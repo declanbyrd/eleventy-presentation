@@ -10,7 +10,8 @@ const code = `
 
   const buttonStyles = {
     fontSize: '2rem',
-    background: 'green',
+    background: 'var(--color-accent)',
+    color: 'var(--color-background)',
     borderRadius: '1rem',
     display: 'block',
     cursor: 'pointer',

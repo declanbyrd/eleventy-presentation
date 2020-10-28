@@ -1,0 +1,42 @@
+[
+  {
+    "id": "default",
+    "name": "Default",
+    "colors" : {
+      "primary": "#c5eff7",
+      "secondary": "#f27935",
+      "accent": "#34b9db",
+      "background": "#181616"
+    }
+  },
+  {
+    "id": "dark-mint",
+    "name": "Dark Mint",
+    "colors" : {
+      "primary": "#E9F5F7",
+      "secondary": "#285056",
+      "accent": "#C1EA00",
+      "background": "#221E2A"
+    }
+  },
+  {
+    "id": "formosa",
+    "name": "Formosa",
+    "colors" : {
+      "primary": "#002447",
+      "secondary": "#FF5003",
+      "accent": "#003F7D",
+      "background": "#E1E3E7"
+    }
+  },
+  {
+    "id": "teal-dreams",
+    "name": "Teal Dreams",
+    "colors" : {
+      "primary": "#F2F2F2",
+      "secondary": "#022840",
+      "accent": "#f9bf3b",
+      "background": "#0E7373"
+    }
+  }
+]

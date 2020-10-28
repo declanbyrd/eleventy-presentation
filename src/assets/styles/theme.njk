@@ -1,0 +1,23 @@
+---
+permalink: '/assets/styles/theme.css'
+excludeFromSitemap: true
+---
+
+{% macro colorscheme(colors) %}
+  --color-primary: {{ colors.primary }};
+  --color-secondary: {{ colors.secondary }};
+  --color-accent: {{ colors.accent }};
+  --color-background: {{ colors.background }};
+{% endmacro %}
+
+{%- set default = themes[0] -%}
+
+:root {
+    {{ colorscheme(default.colors) }}
+}
+
+{% for theme in themes %}
+[data-theme='{{ theme.id }}'] {
+    {{ colorscheme(theme.colors) }}
+}
+{% endfor %}
